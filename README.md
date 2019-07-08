@@ -16,12 +16,18 @@ usage: sql_dump.py *args
 
 optional arguments:
   -h, --help            show this help message and exit
+  
   -bedpe BEDPE, --bedpe BEDPE
                         comma seperated multiple bed file paths (single file can also be provided) containing paired interaction without header (Mandatory)
+ 
   -chrl CHRL, --chrl CHRL
                         chromosome length file containing two columns (chromosomenumber, length) without header (Mandatory)
+ 
   -cks CKS, --cks CKS   Chunk size for dumping to sql (for single iteration) (default=10000000)
+  
   -mds MDS, --mds MDS   minimum intra chromosome distance (default=1000)
+  
   -tag TAG, --tag TAG   comma seperated file tags (single tag can also be provided), the tags should match the -bedpe (Mandatory)
+  
   -odir ODIR, --odir ODIR
                         outdir (Mandatory)
