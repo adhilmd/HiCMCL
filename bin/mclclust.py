@@ -38,22 +38,7 @@ import warnings
 warnings.filterwarnings("ignore")
 from pybedtools import BedTool
 from collections import defaultdict
-#from iced import normalization
 import pickle
-
-
-#if (normtype == "ICE"):
-#    df = df[['id_x','id_y','Count','Distance']]
-#    df['id_x'] = df['id_x'].map(int)
-#    df['id_y'] = df['id_y'].map(int)
-#    df = df[df['Distance'] <= dist]
-#    df = df[['id_x','id_y','Count']]
-#    cnmat = np.zeros((cnt, cnt), dtype=int)
-#    val = df.values
-#    cnmat[val[:,0].astype(int),val[:,1].astype(int)] = val[:,2]
-#    cnmat[val[:,1].astype(int),val[:,0].astype(int)] = val[:,2]
-#    normed = normalization.ICE_normalization(cnmat)
-#    cscmat = csc_matrix(normed, dtype=int)
 
 
 def biningreq(chromnum,findb,sname,initsres,chrbed,clg,normtype,inflation):
@@ -107,7 +92,6 @@ if __name__ == "__main__":
     wc1 = wc[['chrom','start','end']]
     wbed = BedTool.from_dataframe(wc1)
     chromlist = sorted_nicely(list(set(wc['chrom'].tolist())))
-    #chromlist=['chr1','chr2']
     lsizes = te['Bins']
     inflation = te['Inflation']
     biningdict = defaultdict(dict)
