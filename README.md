@@ -32,7 +32,7 @@ optional arguments:
   -odir ODIR, --odir ODIR
                         outdir (Mandatory)
 
-3) Calculating the appropriate parameters for identifying Topological boundaries
+3) Calculating the appropriate parameters for identifying topological boundaries
 
 usage: parametermcl.py *args
 
@@ -70,6 +70,44 @@ optional arguments:
   
   -pref PREF, --pref PREF
                         Prefix for the output files (Mandatory)
+  
+  -odir ODIR, --odir ODIR
+                        Outdir (Mandatory)
+
+4) Identifying the topological boundaries and classfying them based on their strength
+
+usage: mclclust.py *args
+
+
+----------MCL clustering--------- [Date: 7th May 2018], [help: python mclclust.py -h]
+
+
+optional arguments:
+  -h, --help            show this help message and exit
+  
+  -findb FINDB, --findb FINDB
+                        Comma seperated database file (Single file can also be provided) (Mandatory)
+  
+  -chrl CHRL, --chrl CHRL
+                        Chromosome length file containing two columns (chromosomenumber, length) without header (Mandatory)
+  
+  -icore ICORE, --icore ICORE
+                        Core resolution for clustering, in multiples (default=10)
+  
+  -norm NORM, --norm NORM
+                        Normalization type 'median' or 'minmax' (default=minmax)
+  
+  -cpath CPATH, --cpath CPATH
+                        Main path were the codes are present for modules
+  
+  -pfile PFILE, --pfile PFILE
+                        parameter file containing resolution and inflation information from parametermcl script
+  
+  -th THREADS, --th THREADS
+                        Number of threads (default=8)
+  
+  -tag TAG, --tag TAG   Comma seperated file tags for pickle file (single tag can also be provided), the tags should match the -bedpe
+                        (Mandatory)
   
   -odir ODIR, --odir ODIR
                         Outdir (Mandatory)
