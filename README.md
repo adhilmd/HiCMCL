@@ -1,7 +1,7 @@
 # HiCMCL
 High Performance Multi Resolution Markov Clustering for HiC data
 
-All the required codes are in the bin folder. This tool requires python3.4 
+All the required codes are in the bin folder. The HiCMCL requires python3.4 to run the scripts 
 
 1. BAM to bedpe 
 
